@@ -1,0 +1,65 @@
+### Pruebas de Autores y Libros (Nivel 3)
+
+@baseUrl = http://localhost:8080/api
+
+### === FLUJO DE AUTORES ===
+
+# @name crearAutor
+POST {{baseUrl}}/autores
+Content-Type: application/json
+
+{
+    "nombre": "Gabriel",
+    "apellido": "García Márquez"
+}
+
+### Listar todos los autores
+GET {{baseUrl}}/autores
+
+### Buscar autor por ID
+GET {{baseUrl}}/autores/1
+
+### Actualizar autor
+PUT {{baseUrl}}/autores/1
+Content-Type: application/json
+
+{
+    "nombre": "Gabo",
+    "apellido": "García Márquez"
+}
+
+### === FLUJO DE LIBROS ===
+
+# @name crearLibro
+POST {{baseUrl}}/libros
+Content-Type: application/json
+
+{
+    "titulo": "Cien años de soledad",
+    "categoria": "Realismo Mágico",
+    "paginas": 496,
+    "autorId": 1
+}
+
+### Listar todos los libros
+GET {{baseUrl}}/libros
+
+### Buscar libro por ID
+GET {{baseUrl}}/libros/1
+
+### Actualizar libro
+PUT {{baseUrl}}/libros/1
+Content-Type: application/json
+
+{
+    "titulo": "Cien años de soledad (Edición Ilustrada)",
+    "categoria": "Realismo Mágico",
+    "paginas": 520,
+    "autorId": 1
+}
+
+### Eliminar libro
+DELETE {{baseUrl}}/libros/1
+
+### Eliminar autor (Borra libros en cascada)
+DELETE {{baseUrl}}/autores/1
