@@ -8,13 +8,19 @@ Este repositorio está organizado por niveles de complejidad creciente, sirviend
 
 ## 🗺️ Ruta de Aprendizaje
 
-### [Nivel 1] CRUD Básico (Próximamente)
+### [Nivel 1] CRUD Básico
 
 _Fundamentos de Spring Data JPA, Controladores REST y persistencia simple._
 
-### [Nivel 2] Pro CRUD: DTOs & Validation (Próximamente)
+- **📂 [Ver Proyecto](./nivel-1-crud-basico)**
+- **📖 [Guía Detallada en Notion](https://www.notion.so/315c12d45e1281f88bf0f41df81a17a6)**
 
-_Uso de Records, Bean Validation, MapStruct para mapeo automático y manejo básico de excepciones._
+### [Nivel 2] Pro CRUD: DTOs & Validation
+
+_Uso de Records, Bean Validation, MapStruct para mapeo automático y manejo profesional de excepciones._
+
+- **📂 [Ver Proyecto](./nivel-2-pro-crud-dtos)**
+- **📖 [Guía Detallada en Notion](https://www.notion.so/315c12d45e1281a6b686e4d4652b7a52)**
 
 ### [Nivel 3] Relacional CRUD Pro (Autores y Libros)
 
