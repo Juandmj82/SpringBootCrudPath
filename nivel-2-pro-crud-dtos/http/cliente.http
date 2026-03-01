@@ -1,0 +1,64 @@
+### Pruebas para el CRUD de Clientes (Nivel Pro)
+
+#### 1. Listar todos los clientes (Vacio inicialmente)
+GET http://localhost:8080/api/v1/clientes
+Accept: application/json
+
+###
+
+#### 2. Crear un nuevo cliente (POST)
+POST http://localhost:8080/api/v1/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Juan Perez",
+  "email": "juan.perez@example.com",
+  "telefono": "3001234567"
+}
+
+###
+
+#### 3. Intentar crear un cliente con datos invalidos (Error 400)
+POST http://localhost:8080/api/v1/clientes
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "email": "email-invalido",
+  "telefono": "123"
+}
+
+###
+
+#### 4. Obtener un cliente por su ID
+GET http://localhost:8080/api/v1/clientes/1
+Accept: application/json
+
+###
+
+#### 5. Intentar obtener un cliente que no existe (Error 404)
+GET http://localhost:8080/api/v1/clientes/99
+Accept: application/json
+
+###
+
+#### 6. Actualizar un cliente existente (PUT)
+PUT http://localhost:8080/api/v1/clientes/1
+Content-Type: application/json
+
+{
+  "nombre": "Juan Perez Editado",
+  "email": "juan.editado@example.com",
+  "telefono": "3119876543"
+}
+
+###
+
+#### 7. Eliminar un cliente (DELETE)
+DELETE http://localhost:8080/api/v1/clientes/1
+
+###
+
+#### 8. Verificar que fue eliminado
+GET http://localhost:8080/api/v1/clientes/1
+Accept: application/json
